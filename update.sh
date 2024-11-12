@@ -1,6 +1,6 @@
 #!bin/bash
 
-sudo apt update ; sudo apt upgrade ; sudo apt distro-upgrade
+sudo apt update ; sudo apt upgrade -y ; sudo apt distro-upgrade -y
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -29,5 +29,16 @@ nvm install 22
 # verifica se a versão correta da Node.js está no ambiente
 node -v # deve imprimir `v22.11.0`
 
-# verifica se a versão correta da npm está no ambiente
-npm -v # deve imprimir `10.9.0`
+#Instalar Git
+sudo apt install git-all
+
+#Instalar github
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+	&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+	&& sudo apt update \
+	&& sudo apt install gh -y
+
+  #Instalar vim
