@@ -1,6 +1,17 @@
 # Instalação de Programas Essenciais
 
-Este é um script em Shell que automatiza a instalação e atualização de alguns programas essenciais para o desenvolvimento e uso geral do sistema. Ele é pensado para sistemas baseados em Debian/Ubuntu e realiza a atualização do sistema e a instalação de ferramentas como Docker, Java, Node.js, Git/GitHub CLI, Vim/SpaceVim e VS Code.
+Este é um script em Shell que automatiza a instalação e atualização de alguns programas essenciais para o desenvolvimento e uso geral do sistema. Ele é pensado para sistemas baseados em Debian/Ubuntu, realiza a atualização do sistema e a instalação de ferramentas como Docker, Java, e outros programas.
+
+## Lista de programas que são instalados nesse script:
+
+- Docker;
+- Java;
+- NVM (node version manager);
+- Vagrant;
+- Git;
+- Github CLI;
+- SDKMan(Gerenciador de SDKs);
+
 
 ## Funcionalidades
 
@@ -27,7 +38,7 @@ O script executa as seguintes etapas:
 
    - Instala o Git, ferramenta de controle de versão, e a CLI do GitHub (gh) para facilitar o gerenciamento de repositórios remotos no GitHub.
 
-6. **Instalação do Vim e SpaceVim**:
+6. **Instalação do Neovim**:
 
    - Instala o editor de texto Vim e configura o SpaceVim como uma camada de personalização adicional.
 
